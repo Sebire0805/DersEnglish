@@ -2,7 +2,7 @@
 import  { useState } from 'react'
 import Result from './Result'
 import Question from './Question'
-
+import Play from './Play'
 
 function Quiz() {
     const questions=[
@@ -14,21 +14,21 @@ function Quiz() {
         },
         {
             "id":2,
-            "question":"Elifbada nece herf var?",
-            "options":['32','30','31','27'],
-            "answer":'32'
+            "question":"Choose the opposite of big?",
+            "options":['Tall','Huge','Small','Long'],
+            "answer":'Small'
         },
         {
             "id":3,
-            "question":"Bir ilde nece gun var?",
-            "options":['300','345','365','366'],
-            "answer":'365'
+            "question":"What is the plural of  'child'? ",
+            "options":['Childs','Children','Childes','Childer'],
+            "answer":'Children'
         },
         {
             "id":4,
-            "question":"Gun hansi terefden doqur?",
-            "options":['Şərq','Qərb','Şimal','Cənub'],
-            "answer":'Şərq'
+            "question":"What is the correct sentence?",
+            "options":['She can to swim','She cans swims','She can swim','She can swimming'],
+            "answer":'She can swim'
         }
     ]
 
@@ -59,6 +59,7 @@ function Quiz() {
         :
         <Question questionss={questions[currentQuestion]} handleQuiz={handleQuiz}/>
     }
+    
     </>
   )
 }

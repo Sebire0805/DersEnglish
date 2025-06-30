@@ -1,7 +1,7 @@
 import Button from '@mui/material/Button';        
 function Result({score,questionCount}) {
   return (
-    <div>
+    <div className='result'>
        <h1>You got {score}/{questionCount} on your exam</h1>
        <h1 style={{fontSize:'2rem'}}>
           {score ==0
@@ -10,7 +10,7 @@ function Result({score,questionCount}) {
              : '😁'
           }
        </h1>
-       <Button variant='contained' onClick={()=>window.location.reload()}>Yeniden basla</Button>
+       <Button variant='contained' onClick={()=>window.location.reload()}>Start again</Button>
     </div>
     )
 }

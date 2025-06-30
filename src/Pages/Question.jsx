@@ -3,10 +3,10 @@ import Button from '@mui/material/Button';
 function Question({questionss,handleQuiz}) {
 
   return (
-    <div key={questionss.id}>
+    <div className='ques' key={questionss.id}>
         <h1>{questionss.question}</h1>
         
-        <div style={{display:"flex",gap:"1rem"}}>
+        <div style={{display:'flex',gap:'1rem'}} >
             {
                 questionss.options.map((option,index)=>(
                     

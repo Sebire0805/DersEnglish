@@ -1,28 +1,20 @@
-import React from 'react'
-import HeaderColor from '../Components/HeaderColor'
-import Altheader from '../Components/Altheader'
-import { useFormik } from 'formik'
+import React, { useState } from 'react';
+import Header from '../assets/Components/HeaderColor'
+import Altheader from '../assets/Components/Altheader'
+import Footer from '../assets/Components/Footer';
+import HeaderColor from '../assets/Components/HeaderColor';
 function Login() {
-  const formik = useFormik({
-     initialValues: {
-      username: '',
-       email: '',
-       age:'',
-       password:'',
-       confirmpassword:'',
-       terms:'',
-       
-     },
-   });
-   console.log(formik);
-   
+ 
   return (
-    <div>
-      <HeaderColor/>
-      <Altheader/>
-        <h1>Login page</h1>
+    <div className='login'>
+          <HeaderColor/>
+          <Altheader/>
+          <div className='login-two'>
+
+          </div>
+          
     </div>
-  )
+  );
 }
 
-export default Login
+export default Login;

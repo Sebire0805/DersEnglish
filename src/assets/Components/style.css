@@ -1,0 +1,1773 @@
+*{
+     font-family: 'Lucida Sans', 'Lucida Sans Regular',  Geneva,  sans-serif;
+}
+
+/* Əsas header üslubu */
+.headercolor {
+  width: 100%;
+  height: 10vh;
+  background-color: hsl(240, 21%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.headercolor nav {
+  width: 90%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Linklər qutusu */
+.linksc {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  font-size: 1.6rem;
+}
+
+/* Tək link */
+.linkc {
+  color: black;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.linkc:hover {
+  color: #3e4a6d;
+}
+
+/* Hamburger menyu */
+.hamburger {
+  display: none;
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  z-index: 1100;
+}
+
+/* 📱 Mobil üçün (576px-dək)    */
+@media (max-width: 576px) {
+  .hamburger {
+    display: block;
+  }
+
+  .linksc {
+    display: none;
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    gap: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+  }
+
+  .linksc.open {
+    display: flex;
+  }
+
+  .linkc {
+    font-size: 1.6rem;
+    width: 100%;
+  }
+}
+
+/* ============================== */
+/* 📱 Planşet üçün (577px–992px)  */
+/* ============================== */
+@media (min-width: 577px) and (max-width: 992px) {
+  .hamburger {
+    display: block;
+  }
+
+  .linksc {
+    display: none;
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    gap: 1.2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+  }
+
+  .linksc.open {
+    display: flex;
+  }
+
+  .linkc {
+    font-size: 1.8rem;
+    width: 100%;
+  }
+}
+
+/* ============================= */
+/* 💻 Desktop (993px və yuxarı) */
+/* ============================= */
+@media (min-width: 993px) {
+  .linksc {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    gap: 2rem;
+    align-items: center;
+    box-shadow: none;
+    padding: 0;
+    width: auto;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .linkc {
+    font-size: 2rem;
+  }
+}
+
+.linksc{
+       display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 1.6rem;
+}
+.linkc{
+     color:black;
+    font-size: 2rem;
+    text-decoration: none;
+}
+/* Hamburger button - yalnız mobil üçün görünür */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+/* Responsive üçün */
+@media (max-width: 768px) {
+    .headercolor nav .linkc{
+        font-size: 1rem;
+    }
+  .hamburger {
+    display: block;
+  }
+
+  /* Linklər mobil ekranda default olaraq gizli olsun */
+  .linksc {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 10vh;
+    right: 5%;
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    
+   
+  }
+
+  /* Hamburger kliklənəndə görünən class */
+  .linksc.open {
+    display: flex;
+    
+  }
+  
+  
+}
+
+ 
+
+.altheader {
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(179, 142, 94);
+    color: black;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.altheader nav{
+    width: 90%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 1.6rem;
+}
+
+.link{
+    color:white;
+    font-size: 2rem;
+    text-decoration: none;
+}
+/* Hamburger button gizlidir desktopda */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive mobil görünüş */
+@media (max-width: 768px) {
+  /* Hamburger görünür */
+  .hamburger {
+    display: block;
+  }
+
+  /* Links default gizli */
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 10vh;
+    right: 1rem;
+    background-color: rgb(179, 142, 94);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 180px;
+    z-index: 1000;
+  }
+
+  /* Açıq olduqda göstər */
+  .links.open {
+    display: flex;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 25vh;
+  background-color: #030e33;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  gap: 3%;
+  flex-direction: row;
+  color: white;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+.footer .foot-one {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2%;
+  font-size: 1.9rem;
+}
+
+.foot-link {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Responsive mobil görünüş */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+    gap: 1.5rem;
+  }
+
+  .footer .foot-one {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* === BASE STYLES === */
+.home {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-one {
+  width: 100%;
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('./fonimage.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.home-two {
+  width: 50%;
+  height: 80%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+}
+
+.home-two h1 {
+  font-size: 3rem;
+}
+
+.home-two p {
+  font-size: 1.5rem;
+}
+
+/* === WHY SECTION === */
+.home-why {
+  width: 90%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: auto;
+}
+
+.texts {
+  width: 45%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.why-head {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.why-head h1 {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.metn {
+  width: 98%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 3%;
+  justify-content: center;
+  align-items: center;
+}
+
+.metn-one {
+  width: 90%;
+  height: 15%;
+  background-color: #030e33;
+  border-radius: 1rem;
+  color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: 2px solid black;
+  transition: all 0.3s ease;
+}
+
+.metn-one:hover {
+  width: 85%;
+  height: 20%;
+  background-color: rgb(153, 190, 184);
+  color: black;
+}
+
+.pic {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* === MOBILE STYLES (max-width: 576px) === */
+@media (max-width: 576px) {
+  .home-one {
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .home-two {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .home-two h1 {
+    font-size: 2rem;
+  }
+
+  .home-two p {
+    font-size: 1.2rem;
+  }
+
+  .home-why {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .texts {
+    width: 100%;
+  }
+
+  .why-head h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .metn{
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .metn-one {
+    flex-direction: column;
+    padding: 0.5rem;
+    font-size: 1rem;
+    height: auto;
+  }
+
+  .pic {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* === TABLET STYLES (min-width: 577px to 992px) === */
+@media (min-width: 577px) and (max-width: 992px) {
+  .home-one {
+    height: 80vh;
+    padding: 2rem;
+    align-items: center;
+  }
+
+  .home-two {
+    width: 80%;
+    padding: 1rem;
+  }
+
+  .home-two h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-two p {
+    font-size: 1.3rem;
+  }
+
+  .home-why {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .texts {
+    width: 100%;
+    align-items: center;
+  }
+
+  .why-head h1 {
+    font-size: 2.5rem;
+  }
+  .metn{
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .metn-one {
+    width: 90%;
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+
+  .pic {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* === SMALL DESKTOPS (min-width: 993px to 1200px) === */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .home-two {
+    width: 60%;
+  }
+
+  .home-two h1 {
+    font-size: 2.8rem;
+  }
+
+  .home-two p {
+    font-size: 1.4rem;
+  }
+
+  .why-head h1 {
+    font-size: 3rem;
+  }
+
+  .metn-one {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+ .about{
+    width: 100%;
+    height: 200vh;
+     background-color: hsl(240, 21%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.about-one{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    background-color: hsl(240, 21%, 92%);
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.about-two{
+    width: 90%;
+    height: 90%;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;   
+}
+.about-text{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    border-radius: 2rem 0rem 0rem 4rem;
+}
+.about-text h1{
+    color:blue;
+    font-weight: 400;
+}
+.about-text p{
+    font-size: 1.4rem;
+}
+
+@keyframes mezun{
+    0% {
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+   100% {transform: scale(1);}
+}
+.mezun{
+    animation: mezun 1.2s infinite;
+    display: inline-block;
+}
+.about-pic{
+    width: 60%;
+    height: 90%;
+   position: relative;
+    display: flex;
+    justify-content: end;    
+    flex-direction: row;
+    gap: 1rem;
+}
+.about-pic img{
+    width: 100%;
+    height: 100%; 
+}
+.about-btn{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+}
+.speak{
+    transform: rotate(25deg);
+    
+}
+
+.speak1{
+    transform: rotate(350deg);
+     animation: speak 1.2s infinite;
+    display: inline-block; 
+}
+.about-three{
+    width: 100%;
+    height:80vh ;
+    display: flex;
+    flex-direction: column;
+    border-radius: 7rem 0rem 5rem 0rem ;
+}
+.about-what{
+    width: 90%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-what h1{
+     color: blue;
+   box-shadow: 2px 2px 5px rgb(42, 101, 179);
+    font-size: 3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',  Geneva,  sans-serif;
+    border-radius: 20%;
+}
+.about-students{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+.about-more{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+    justify-content: center;
+    align-items: center;
+}
+.about-more .about-student{
+    width: 50%;
+    height: 90%;
+    background-color:beige ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 3rem;
+
+}
+.about-student{
+    width: 20%;
+    height: 90%;
+    background:beige; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    color:black;
+}
+.about-student img{
+    width: 70%;
+    height:50% ;
+    border-radius: 3rem;
+}
+
+
+
+/* Responsive düzəlişlər */
+@media (max-width:992px){
+
+  .about-btn{
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .about-two {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .about-text, .about-pic {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-pic {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .about-pic img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    max-height: 400px;
+    border-radius: 1rem;
+  }
+
+  .about-btn {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .about-btn button {
+    width: 40%;
+  }
+
+  .about-three {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .about-students {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .about-student {
+    width: 45%;
+    height: auto;
+  }
+
+  .about-more {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .about-more .about-student {
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .about{
+    width: 100%;
+    height: auto;
+  }
+  .about-one{
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+    .about-pic {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .about-pic img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 1rem;
+    max-height: 300px;
+  }
+  .about-btn{
+    display: flex;
+    
+    flex-direction: column;
+
+  }
+  .speak{
+   
+    transform: rotate(0);
+  }
+   .speak1{
+    transform: rotate(0);
+  }
+  .about-text h1,
+  .about-what h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .about-btn button {
+    width: 90%;
+  }
+.about-students{
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+}
+  .about-student {
+    width: 90%;
+    height: auto;
+  }
+
+  .about-more .about-student {
+    width: 90%;
+  }
+
+  .about-pic img {
+    width: 100%;
+    max-height: 300px;
+  }
+}
+  
+@media (max-width: 768px) {
+  .about{
+    width: 100%;
+    height: auto;
+  }
+  .about-two {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .about-pic {
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .about-pic img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 400px;
+    border-radius: 1rem;
+  }
+
+  .about-btn {
+    width: 100%;
+    height: auto;
+    display: none;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  .speak{
+    transform: rotate(0);
+  }
+  .speak1{
+    transform: rotate(0);
+  }
+  .about-three{
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  .about-students{
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .about-more{
+     width: 100%;
+     
+    height: auto;
+    flex-direction: row;
+    
+  }
+  
+}
+@media (max-width: 992px) {
+  .about{
+    width: 100%;
+    height: auto;
+  }
+  .about-one{
+    width: 100%;
+    height: auto;
+  }
+  .about-two {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .about-text {
+    width: 90%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .about-pic {
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    flex-direction: row;
+  }
+
+  .about-pic img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 450px;
+    border-radius: 1rem;
+  
+  }
+
+  .about-btn {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+.speak{
+  transform: rotate(0);
+}
+.speak1{
+  transform: rotate(0);
+}
+.about-three{
+  width: 100%;
+  height: auto;
+}
+  .about-students {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+    height: auto;
+  }
+
+  .about-student {
+    width: 40%;
+    height: auto;
+  }
+
+  .about-more {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .about-more .about-student {
+    width: 40%;
+    height: auto;
+  }
+}
+@media (max-width: 1200px) {
+  .about{
+    width: 100%;
+    height: auto;
+  }
+  .about-one{
+    width: 100%;
+    height: auto;
+  }
+  .about-two {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .about-text {
+    width: 48%;
+    height: auto;
+    text-align: center;
+    
+  }
+
+  .about-pic {
+    width: 48%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .about-pic img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 1rem;
+  }
+
+  .about-btn {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .about-three{
+    width: 100%;
+    height: auto;
+  }
+
+  .about-students {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .about-student {
+    width: 22%;
+    height: auto;
+  }
+
+  .about-more {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .about-more .about-student {
+    width: 22%;
+    height: auto;
+  }
+}
+.contact {
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(240, 21%, 92%);
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-one {
+  width: 90%;
+  height: 90%;
+  background-color: hsl(240, 21%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 5%;
+}
+
+.contact-text {
+  width: 45%;
+  height: 90%;
+  background-color: #d4d4f0;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.contact-form {
+  width: 45%;
+  height: 90%;
+  background-color: #d4d4f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+
+.icon {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* 💻 Laptop/Desktop (≥1200px) */
+@media (min-width: 1200px) {
+  .contact {
+    height: 100vh;
+    
+  }
+  .contact-text,
+  .contact-form {
+    width: 45%;
+    font-size: 1.5rem;
+  }
+}
+
+/* 💻 Medium screen (993px - 1199px) */
+@media (min-width: 993px) and (max-width: 1199px) {
+  .contact {
+    height: auto;
+    padding: 2rem;
+  }
+  .contact-one {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .contact-text,
+  .contact-form {
+    width: 48%;
+    height: auto;
+    padding: 2rem;
+    font-size: 1.3rem;
+  }
+}
+
+/* 📱💻 Tablet (577px - 992px) */
+@media (min-width: 577px) and (max-width: 992px) {
+  .contact {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .contact-one {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-text,
+  .contact-form {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .icon {
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .icon svg {
+    font-size: 2rem;
+  }
+}
+
+/* 📱 Mobile (≤576px) */
+@media (max-width: 576px) {
+  .contact {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .contact-one {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-text,
+  .contact-form {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .icon {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .icon svg {
+    font-size: 1.5rem;
+  }
+}
+.quizstart{
+    width: 100%;
+    height: 85vh;
+    background-color:#c33cdb; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main{
+    width: 100%;
+    height: 85vh;
+    background: color #c33cdb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quiz-one{
+    width: 100%;
+    height: 100%;
+    background-color:#c33cdb;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    
+}
+.quiz-one-two{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+   
+}
+.quiz-one-img{
+    width: 50%;
+    height: 100%;
+}
+.quiz-one-img img{
+    width: 100%;
+    height: 100%;
+}
+.quiz-one-two img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 90px;
+    animation: spin 4s linear infinite;
+}
+@keyframes spin{
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.quiz-one h1{
+    font-size: 3rem;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.quiz-one button{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 1rem;
+}
+.ques{
+    width: 45rem;
+    height: 50%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.result{
+    width: 60%;
+    height: 50%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5%;
+}
+
+.lessons {
+  width: 100%;
+  min-height: 175vh;
+ 
+  background-color: hsl(240, 21%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+/* GENERAL SECTION */
+.general {
+  width: 100%;
+  max-width: 1200px;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+  box-sizing: border-box;
+}
+
+.gen-poc {
+  width: 50%;
+  height: 100%;
+}
+
+.gen-poc img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gen-text {
+  width: 50%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: 'Lucida Sans', 'Lucida Grande', Geneva, sans-serif;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.gen-text h1 {
+  color: hsla(51, 93%, 29%, 0.877);
+  font-weight: 600;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+/* TEST SECTION */
+.test {
+  width: 60%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+  box-sizing: border-box;
+}
+@media(min-width:992px) and (max-width:1100px)   {
+  .lessons{
+    width:100% ;
+    height: auto;
+  
+  }
+  .general{
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  .gen-poc{
+    width: 100%;
+    height: auto;
+  }
+  .gen-text{
+    width: 100%;
+    height: auto;
+  }
+  .test{
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/* Planşet və kiçik desktop (992px aşağı) */
+@media (max-width: 992px) {
+  .general {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .gen-poc,
+  .gen-text {
+    width: 100%;
+    height: auto;
+  }
+  
+  .gen-text h1 {
+    font-size: 2rem;
+  }
+  
+  .test {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* Mobil (576px aşağı) */
+@media (max-width: 576px) {
+  .lessons {
+    min-height: auto;
+    padding: 1rem;
+  }
+  
+  .general {
+    height: auto;
+    gap: 1rem;
+  }
+  
+  .gen-text h1 {
+    font-size: 1.5rem;
+  }
+  
+  .test {
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
+  }
+}
+
+.videos {
+    width: 100%;
+    min-height: 90vh;
+    background-color: hsl(240, 21%, 92%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
+
+.video {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Normal desktop */
+.video iframe {
+    width: 300px;
+    height: 200px;
+    border-radius: 1.5rem;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.video iframe:hover {
+    transform: scale(1.05);
+}
+
+/* Tablet portret (577px - 992px) */
+@media (max-width: 992px) and (min-width: 577px) {
+    .video iframe {
+        width: 45%;
+        height: 180px;
+    }
+}
+
+/* Kiçik tablet və böyük telefonlar (360px - 576px) */
+@media (max-width: 576px) and (min-width: 360px) {
+    .video iframe {
+        width: 100%;
+        height: 180px;
+    }
+}
+
+/* Mobil telefonlar (360px-dən kiçik) */
+@media (max-width: 359px) {
+    .video iframe {
+        width: 100%;
+        height: 150px;
+    }
+}
+.senten{
+    width: 40%;
+    height: 40%;
+    background-color: antiquewhite;
+}
+.game{
+    width: 100%;
+    height: 80vh;
+   background: linear-gradient(to right,#1c1e99,#b53eca);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+.game-one{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+   align-items: center;
+    flex-direction: row;
+    gap: 3%;
+    
+}
+.game-two{
+     width: 45%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+.game-one h1{
+    color: white;
+    font-size: 3rem;
+}
+.game-one h2{
+    color: white;
+}
+.game-play{
+    width: 40%;
+    height: 45vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@media(max-width:576px){
+  .game{
+    width: 100%;
+    height: auto;
+  }
+  .game-one{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+  }
+  .game-two{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .game-play{
+    width: 100%;
+    height: auto;
+  }
+}
+@media(max-width:768px){
+  .game{
+    width: 100%;
+    height: auto;
+  }
+  .game-one{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+  }
+  .game-two{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .game-play{
+    width: 100%;
+    height: auto;
+  }
+}
+@media(max-width:992px){
+  .game{
+    width: 100%;
+    height: 40rem;
+  }
+  .game-one{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+  }
+  .game-two{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .game-play{
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+.book {
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(240, 21%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Form konteyneri üçün əsas üslublar */
+.book .container {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Başlıq üslubu */
+.book .container h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Etiketlər və inputlar */
+.book .form-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.book .form-control,
+.book .form-select {
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+  font-size: 1rem;
+}
+
+/* Qiymət mətni */
+.book .fw-bold {
+  font-size: 1.1rem;
+  color: #000;
+}
+
+/* Düymə üslubu */
+.book .btn {
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 0.7rem;
+}
+
+/* --- Responsivlik --- */
+
+/* Tablet (768px və aşağı) */
+@media (max-width: 768px) {
+  .book {
+    padding: 1.5rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .book .container {
+    padding: 1.5rem;
+  }
+
+  .book .container h4 {
+    font-size: 1.3rem;
+  }
+
+  .book .fw-bold {
+    font-size: 1rem;
+  }
+
+  .book .btn {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobil (480px və aşağı) */
+@media (max-width: 480px) {
+  .book {
+    padding: 1rem;
+    height: auto;
+  }
+
+  .book .container {
+    padding: 1rem;
+    height: auto;
+  }
+
+  .book .container h4 {
+    font-size: 1.1rem;
+  }
+
+  .book .form-control,
+  .book .form-select {
+    font-size: 0.95rem;
+  }
+
+  .book .btn {
+    font-size: 0.9rem;
+  }
+
+  .book .fw-bold {
+    font-size: 0.95rem;
+  }
+}
